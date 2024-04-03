@@ -1,5 +1,7 @@
 ﻿using System.Security.Cryptography.X509Certificates;
 
+using System.Diagnostics;
+
 internal class Program
 {
     public class Product
@@ -40,8 +42,10 @@ internal class Program
         Bill bill = new Bill();
         bill.AddProductList(new Product("1",1));
         bill.AddProductList(new Product("2", 3));
+        bill.AddProductList(new Product("4", 5));
         bill.PrintProductList();
 
+        Debug.WriteLine("Hello, World!");
         //Console.WriteLine("Hello, World!");
     }
 }
